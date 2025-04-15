@@ -1,0 +1,11 @@
+services:
+  containers-api:
+    container_name: komodo_containers_api
+    image: kntrllr/komodo-containers-api:latest
+    labels:
+      komodo.skip: null
+    restart: unless-stopped
+    ports:
+      - 9121:9121
+    environment:
+      KOMODO_URL: http://core:9120
